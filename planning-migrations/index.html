@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>A Pragmatic Look at Drupal Development</title>
+        <title>Planning a Drupal Migration</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
@@ -30,16 +30,6 @@
         <![endif]-->
 
         <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Londrina+Solid">
-        <style>
-            .web-app img {
-                margin-top: 1em;
-            }
-
-            .web-app-responsibilities ul {
-                margin-top: 1.5em;
-            }
-
-        </style>
 
         <script type="text/javascript">
 
@@ -65,9 +55,9 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>A Pragmatic Look at Drupal Development</h1>
-                    <img src="assets/img/logo.png" style="height: 200px; width: auto" />
-                    <h3>DrupalCamp Chicago 2013</h3>
+                    <h1>Planning a Drupal<br />Migration</h1>
+                    <img src="assets/img/fox-valley-drupal.png" style="height: 200px; width: auto; margin-bottom: 1em" />
+                    <h3>March 19, 2014</h3>
                 </section>
 
                 <section class="about">
@@ -83,90 +73,75 @@
                     </aside>
                 </section>
 
-                <!--                <section class="objectives">
-                                    <h2>Objectives</h2>
-                    <ul>
-                        <li>Drupal as a web app</li>
-                        <li>Drupal as a web app</li>
-                        <li>Drupal as a web app</li>
-                        <li>Drupal as a web app</li>
-                        <li>Drupal as a web app</li>
+                <section class="objectives">
+                    <h2>Objectives</h2>
+                    <ul class="list-spaced-more" style="margin: 0 3em">
+                        <li>Highlight strategies for assessing source content</li>
+                        <li>Cover concepts for rebuilding a site in Drupal</li>
+                        <li>Identify other considerations for a rebuild</li>
                     </ul>
-                    <aside class="notes">
-                    </aside>
-                </section> -->
+                </section>
 
                 <section class="agenda">
                     <h2>Agenda</h2>
-                    <ul class="list-spaced-more">
-                        <li>What a "web app" is and does.</li>
-                        <li>Data modeling in and out of Drupal.</li>
-                        <li>Using Drupal to render data.</li>
+                    <ul class="list-spaced-more" style="margin: 1em 3em">
+                        <li>Analyzing an existing site</li>
+                        <li>Rebuilding in Drupal</li>
+                        <li>Special Considerations</li>
                     </ul>
-                    <aside class="notes">
-                    </aside>
                 </section>
 
-                <section class="web-app">
-                    <section class="traditional-web-app">
-                        <h2>Traditional Web App</h2>
-                        <img src="assets/img/web_app.png">
-                        <aside class="notes">
-                            html, xml/rss, ajax/json, files, errors
-                        </aside>
-                    </section>
-
-                    <section class="drupal-as-web-app">
-                        <h2>Drupal as a Web App</h2>
-                        <img src="assets/img/drupal_web_app.png">
-                        <aside class="notes">
-                            Tons of modules, bad development
-                        </aside>
-                    </section>
-
-                    <section class="drupal-mouse-trap">
-                        <h2>Drupal as a Web App</h2>
-                        <img src="assets/img/mouse_trap.png">
-                        <aside class="notes">
-                            Tons of modules, bad development
-                        </aside>
-                    </section>
-
+                <section>
+                    <h2>Why Migrate</h2>
+                    <p style="margin: 1em 2em; text-align: center" class="fragment">Major releases upgrades have been challenging.</p>
+                    <p style="margin: 1em 2em; text-align: center" class="fragment">Drupal is in demand.</p>
+                    <p style="margin: 1em 2em; text-align: center" class="fragment">The official Drupal 8 upgrade path is a Migrate operation.</p>
                 </section>
-
-                <section class="basic-responsibilities">
-                    <h2>Basic Responsibilities</h2>
-                    <ul class="list-spaced-more">
-                        <li>Data modeling</li>
-                        <li>Data rendering</li>
+                    
+                <section>
+                    <h2>Analyzing Content Sources</h2>
+                    <ul class="list-spaced" style="margin: 1em 3em">
+                        <li>The existing site is a starting point</li>
+                        <li>Use navigation elements and sections</li>
+                        <li>Analyze content structure</li>
                     </ul>
-                    <aside class="notes">
-                    </aside>
                 </section>
-
-                <section class="web-app">
-                    <section class="traditional-data">
-                        <h2>Traditional Data Modeling</h2>
-                        <img style="max-height: 300px" src="assets/img/databasedesign.gif">
-                        <aside class="notes">
-                        </aside>
+                
+                <section>
+                    <section>
+                        <h2>Example Source</h2>
+                        <h3>Wired</h3>
+                        <p><img src="assets/img/wired.png" style="height: 250px; width: auto"></p>
+                        <a href="http://www.wired.com/">http://www.wired.com/</a>
                     </section>
-                    <section class="drupal-data">
-                        <h2>Drupal Data Modeling</h2>
-                        <img style="max-height: 300px" src="assets/img/drupal_data.png">
-                        <aside class="notes">
-                            Number (dec, int), Text (field, area w(/o) sum), List, Node Ref, Link
-                        </aside>
+                    <section>
+                        <h2>Example Source</h2>
+                        <h3>The Verge</h3>
+                        <p><img src="assets/img/theverge.png" style="height: 250px; width: auto"></p>
+                        <a href="http://www.theverge.com/">http://www.theverge.com/</a>
+                    </section>
+                    
+                    <section>
+                        <h2>Example Source</h2>
+                        <h3>The Boston Globe</h3>
+                        <p><img src="assets/img/bostonglobe.png" style="height: 250px; width: auto"></p>
+                        <a href="http://bostonglobe.com/">http://bostonglobe.com/</a>
                     </section>
                 </section>
-
-                <section class="data-rendering">
-                    <h2>Data Rendering</h2>
-                    <ul class="list-spaced-more">
-                        <li>Rendered entities</li>
-                        <li>Views</li>
-                    </ul>
-                    <p>It's time to look at some code.</p>
+                
+                <section>
+                    <h2>Rebuilding in Drupal</h2>
+                    <p style="margin: 1em 0">Build the data model using content types and fields.</p>
+                    <p class="fragment" style="margin: 1em 0">Adjust content as desired as it's moved in.</p>
+                    <p class="fragment" style="margin: 1em 0">Rethink functionality of the site.</p>
+                </section>
+                
+                <section>
+                    <h2>Other Considerations</h2>
+                    <p style="margin: 1em 0">Preserve/adjust content URLs</p>
+                    <p class="fragment" style="margin: 1em 0">Linking between content</p>
+                    <p class="fragment" style="margin: 1em 0">File assets</p>
+                    <p class="fragment" style="margin: 1em 0">Other data</p>
                 </section>
 
                 <section>
@@ -178,7 +153,7 @@
 
             <div class="footer">
                 <ul>
-                    <li class="first">A Pragmatic Look at Drupal Development</li>
+                    <li class="first">Planning a Drupal Migration</li>
                     <li class="last"><a href="http://kerasai.com">Kerasai.com</a></li>
                 </ul>
             </div>
