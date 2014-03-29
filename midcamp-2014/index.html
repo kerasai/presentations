@@ -167,8 +167,7 @@
                     </section>
                     <section>
                         <h2>WYGIWYG</h2>
-                        <img src="assets/img/mousetrap.jpg" style="height: 400px; width: auto;">
-                        <p><a href="https://www.flickr.com/photos/26231875@N00/2698825567" style="font-size: .5em">https://www.flickr.com/photos/26231875@N00/2698825567</a></p>
+                        <h3 class="fragment" style="margin-top: 3em">Is that a word?</h3>
                         <aside class="notes">
                             - Not mutant, just somewhere in the middle. Mutant?<br />
                             - Not just a framework, a framework with simple product, flexible to build upon<br />
@@ -184,6 +183,126 @@
                         <h2>WAIT!</h2>
                         <img src="assets/img/i-care.jpg" style="height: 400px; width: auto;" />
                     </section>
+                </section>
+                
+                <section>
+                    <h2 style="font-size: 1.8em">Fundamentals of a Web App</h2>
+                    <ul class="list-spaced-more" style="margin: 1.5em 2em">
+                        <li>Routing</li>
+                        <li>Business Logic</li>
+                        <li>Response</li>
+                    </ul>
+                    <aside class="notes">
+                        - Drupal does all of these things<br />
+                        - The big win is the cool pre-built stuff, things that support the "app"
+                    </aside>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>Users &amp; User Management</h2>
+                        <ul class="list-spaced-more" style="margin: 1em 2em">
+                            <li>Authentication</li>
+                            <li>Management</li>
+                            <li>Roles, permissions, access control</li>
+                            <li>Self-serv</li>
+                        </ul>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Form API</h2>
+                        <img src="assets/img/fapi.png" style="height: 400px; width: auto;">
+                        <p><a href="https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7" style="font-size: .5em">https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/7</a></p>
+                        <aside class="notes">
+                            - Complex, dynamic forms w/validation<br />
+                            - Alterable and themeable<br />
+                            - The little things already work<br />
+                            - Display errors, highlight, pre-filled items<br />
+                            - Extensible, custom form elements
+                        </aside>
+                    </section>
+                    
+                    <section>
+                        <h2>Dang, That's a lot of Work</h2>
+                        <img src="assets/img/dump-truck.jpg" style="height: 400px; width: auto;">
+                        <p><a href="https://www.flickr.com/photos/9197427@N06/3478395047" style="font-size: .5em">https://www.flickr.com/photos/9197427@N06/3478395047</a></p>
+                        <aside class="notes">
+                            - Tried, tested, secure<br />
+                            - Nobody wants to build that on their own
+                        </aside>
+                    </section>
+                </section>
+                
+                <section>
+                    <h2>Theme Layer</h2>
+                    <img src="assets/img/theme.jpg" style="height: 400px; width: auto;">
+                    <p><a href="https://api.drupal.org/api/drupal/includes!theme.inc/function/theme/7" style="font-size: .5em">https://api.drupal.org/api/drupal/includes!theme.inc/function/theme/7</a></p>
+                    <aside class="notes">
+                        - Markup should be generated through the theme system, "theme" function<br />
+                        - Every last bit fully-customizable (in theory)<br />
+                        - D7 & contrib pretty good about theme-able output
+                    </aside>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2>Data Modeling</h2>
+                        <h3>Schema & DBTNG</h3>
+                        <ul class="list-spaced-more" style="margin: .5em 2em">
+                            <li>Build and maintain custom tables</li>
+                            <li>Query building, sanitization</li>
+                            <li>Expose to other tools</li>
+                        </ul>
+                        <aside class="notes">
+                           - "Very custom" things, performance<br />
+                           - Simplified PDO interface, for DX<br />
+                           - Use Views!!!
+                       </aside>
+                   </section>
+                    
+                    <section>
+                        <h2>Data Modeling</h2>
+                        <h3>Fields</h3>
+                        <ul class="list-spaced-more" style="margin: .5em 2em">
+                            <li>Easy to use</li>
+                            <li>Easy to extend</li>
+                            <li>Integrates will with core &amp; contrib</li>
+                        </ul>
+                        <aside class="notes">
+                           - Better solution than custom?<br />
+                           - Complex data types and relations<br />
+                           - Extend existing types via field widgets and formatters<br />
+                           - Create new types<br />
+                           - Integrates with Views, efq, entity api, etc<br />
+                           - Use 'em
+                       </aside>
+                    </section>
+                    
+                    <section>
+                        <h2>Data Modeling</h2>
+                        <img src="assets/img/hapi.png" style="height: 400px; width: auto;">
+                        <p><a href="http://nickveenhof.be/blog/request-drupal-makes-me-hapi-background" style="font-size: .5em">http://nickveenhof.be/blog/request-drupal-makes-me-hapi-background</a></p>
+                    </section>
+                </section>
+                
+                <section>
+                    <h2>(Some of) The Rest</h2>
+                    <ul class="list" style="margin: .5em 2em">
+                        <li>Security</li>
+                        <li>Caching &amp; performance</li>
+                        <li>i18n</li>
+                        <li>Views</li>
+                        <li>Token</li>
+                        <li>Rules</li>
+                    </ul>
+                    <aside class="notes">
+                       - Security is important!!!<br />
+                       - Security: Sanitation and escaping; Permission-based access; Security team, updates, etc<br />
+                       - Views, Token, Rules to integrate w/contrib<br />
+                       - Embrace Drupal, core &amp; contrib
+                   </aside>
                 </section>
                 
                 <section>
