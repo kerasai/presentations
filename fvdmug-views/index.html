@@ -33,16 +33,19 @@
 
         <script type="text/javascript">
 
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-39290540-1']);
-          _gaq.push(['_setDomainName', 'kerasai.com']);
-          _gaq.push(['_trackPageview']);
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-39290540-1']);
+            _gaq.push(['_setDomainName', 'kerasai.com']);
+            _gaq.push(['_trackPageview']);
 
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
 
         </script>
 
@@ -79,7 +82,7 @@
                     <p style="margin-bottom: 1em; font-size: .9em; text-align: left"><strong>Chicago 2013:</strong><br /><a href="https://github.com/kerasai/chicago_2013">https://github.com/kerasai/chicago_2013</a></p>
                     <p style="margin-bottom: 1em; font-size: .9em; text-align: left"><strong>FVDMUG Views:</strong><br /><a href="https://github.com/kerasai/fvdmug_views">https://github.com/kerasai/fvdmug_views</a></p>
                 </section>
-                
+
                 <section>
                     <h2>Objectives</h2>
                     <ul class="list-spaced-more" style="margin:1.5em; font-size: .9em">
@@ -88,7 +91,7 @@
                         <li>Highlight the benefits of extending Views</li>
                     </ul>
                 </section>
-                
+
                 <section>
                     <h2>Agenda</h2>
                     <ul class="list-spaced-more" style="margin:1.5em 2em">
@@ -109,25 +112,88 @@
                     <a href="http://prateekvjoshi.com/2013/01/12/expectation-maximization/" style="font-size: .7em; clear: both">http://prateekvjoshi.com/2013/01/12/expectation-maximization/</a>
                     <aside class="notes">Might have input, dynamically creates a query, renders the result.</aside>
                 </section>
-                
+
                 <section>
                     <h2>Why Should I Use Views?</h2>
-                    <p class="fragment" style="margin: 3em">I can write SQL.</p>
+                    <p class="fragment" style="margin: 1.5em">I can write SQL.</p>
                     <h3 class="fragment">Because everybody else is!</h3>
+                    <h3 class="fragment">And they use it because it's awesome!</h3>
                     <aside class="notes">It's a standard for Drupal sites.</aside>
                 </section>
-                
+
                 <section>
                     <h2>Do I Need to Know This?</h2>
                     <p style="margin: 2em 0 0">Okay, I'll <em>use</em> Views.</p>
                     <ul class="list-spaced-more" style="margin: 1em 0">
-                        <li>views_embed_view() works</li>
+                        <li class="fragment">views_embed_view() works</li>
                         <li class="fragment">I can hack templates</li>
                         <li class="fragment">I've used hook_query_alter()</li>
                     </ul>
-                    <aside class="notes">Good luck. Not sustainable, leads to endless heartbreak and misery.</aside>
+                    <aside class="notes">Good luck. I've been here, and tried this. Not sustainable, leads to endless heartbreak and misery.</aside>
                 </section>
-                
+
+                <section>
+                    <section>
+                        <h2>Where to Start</h2>
+                        <h3>Plugins</h3>
+                        <ul class="list-spaced" style="margin: .2em 2em; width: 50%; float: left; font-size: .8em">
+                            <li>access</li>
+                            <li>argument (validation)</li>
+                            <li>cache</li>
+                            <li>display</li>
+                            <li>exposed form</li>
+                        </ul>
+                        <ul class="list-spaced" style="margin: .2em 0; float: left; font-size: .8em">
+                            <li>localization</li>
+                            <li>pager</li>
+                            <li>query</li>
+                            <li>row</li>
+                            <li>style</li>
+                        </ul>
+                        <aside class="notes">Facilitate the Views ecosystem, allow Views to work.</aside>
+                    </section>
+                    <section>
+                        <h2>Where to Start</h2>
+                        <h3>Handlers</h3>
+                        <ul class="list-spaced" style="margin: .2em 2em; width: 50%; float: left; font-size: 1em">
+                            <li>area</li>
+                            <li>argument</li>
+                            <li>field</li>
+                        </ul>
+                        <ul class="list-spaced" style="margin: .2em 0; float: left; font-size: 1em">
+                            <li>filter</li>
+                            <li>relationship</li>
+                            <li>sort</li>
+                        </ul>
+                        <aside class="notes">Facilitate the Views ecosystem, allow Views to work.</aside>
+                    </section>
+                    <section>
+                        <h2>Plugins &amp; Handlers</h2>
+                        <h3 style="margin-top: 2em">Views plugins and handlers<br />utilize OOP/OOD.</h3>
+                        <aside class="notes">Heavy lifting done by the base classes. D8 realizes many of the same benefits.</aside>
+                    </section>
+                    <section>
+                        <h2>Where to Start</h2>
+                        <h3>Key Hooks:</h3>
+                        <ul class="list-spaced" style="margin: 1em 0">
+                            <li>hook_views_api()</li>
+                            <li>hook_views_data()</li>
+                            <li>hook_views_plugins()</li>
+                        </ul>
+                        <aside class="notes">Descriptions, alter hooks.</aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Almost Ready to Look at Code</h2>
+                    <h3>Tips:</h3>
+                    <ul class="list-spaced-more" style="margin: 1em 0">
+                        <li>Include your classes in the module's .info</li>
+                        <li>Turn on Views SQL preview</li>
+                        <li>Turn of Views caching</li>
+                    </ul>
+                </section>
+
                 <section>
                     <h2>Questions</h2>
                     <h3 style="margin-top: 2.5em">Thanks for attending.</h3>
