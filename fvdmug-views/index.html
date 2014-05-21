@@ -74,6 +74,13 @@
                 </section>
 
                 <section>
+                    <h2>Following Along</h2>
+                    <p style="margin-bottom: 1em; font-size: .9em; text-align: left"><strong>Slides:</strong><br /><a href="http://presentations.kerasai.com/fvdmug-views">http://presentations.kerasai.com/fvdmug-views</a></p>
+                    <p style="margin-bottom: 1em; font-size: .9em; text-align: left"><strong>Chicago 2013:</strong><br /><a href="https://github.com/kerasai/chicago_2013">https://github.com/kerasai/chicago_2013</a></p>
+                    <p style="margin-bottom: 1em; font-size: .9em; text-align: left"><strong>FVDMUG Views:</strong><br /><a href="https://github.com/kerasai/fvdmug_views">https://github.com/kerasai/fvdmug_views</a></p>
+                </section>
+                
+                <section>
                     <h2>Objectives</h2>
                     <ul class="list-spaced-more" style="margin:1.5em; font-size: .9em">
                         <li>Cover key aspects of developing with Views</li>
@@ -84,14 +91,43 @@
                 
                 <section>
                     <h2>Agenda</h2>
-                    <ul class="list-spaced-more" style="margin:2em">
+                    <ul class="list-spaced-more" style="margin:1.5em 2em">
                         <li>Define the concepts behind Views</li>
                         <li>Review basic Views API</li>
                         <li>Analyze common scenarios of Views development</li>
                     </ul>
-                    <aside class="notes">Review code!</aside>
+                    <aside class="notes">That includes reviewing code! Let's dive in.</aside>
                 </section>
 
+                <section>
+                    <h2>What's a View?</h2>
+                    <img src="assets/img/black-box.jpeg"  style="height: 200px; width: auto; float: left; margin: 1em 0" />
+                    <ul class="list-spaced" style="margin: 2em 0">
+                        <li>Query Generator</li>
+                        <li>Rendering Mechanism</li>
+                    </ul>
+                    <a href="http://prateekvjoshi.com/2013/01/12/expectation-maximization/" style="font-size: .7em; clear: both">http://prateekvjoshi.com/2013/01/12/expectation-maximization/</a>
+                    <aside class="notes">Might have input, dynamically creates a query, renders the result.</aside>
+                </section>
+                
+                <section>
+                    <h2>Why Should I Use Views?</h2>
+                    <p class="fragment" style="margin: 3em">I can write SQL.</p>
+                    <h3 class="fragment">Because everybody else is!</h3>
+                    <aside class="notes">It's a standard for Drupal sites.</aside>
+                </section>
+                
+                <section>
+                    <h2>Do I Need to Know This?</h2>
+                    <p style="margin: 2em 0 0">Okay, I'll <em>use</em> Views.</p>
+                    <ul class="list-spaced-more" style="margin: 1em 0">
+                        <li>views_embed_view() works</li>
+                        <li class="fragment">I can hack templates</li>
+                        <li class="fragment">I've used hook_query_alter()</li>
+                    </ul>
+                    <aside class="notes">Good luck. Not sustainable, leads to endless heartbreak and misery.</aside>
+                </section>
+                
                 <section>
                     <h2>Questions</h2>
                     <h3 style="margin-top: 2.5em">Thanks for attending.</h3>
