@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>It's Your Data--Own It!</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/kerasai.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Londrina+Solid">
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-39290540-1']);
+            _gaq.push(['_setDomainName', 'kerasai.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1 style="font-size: 2em">It's Your Data--Own It!</h1>
+                    <img src="assets/img/drupalcorn.png" style="height: 180px; width: auto; margin: 1.5em" />
+                    <h3 style="font-size: 1.3em">DrupalCorn Camp 2014</h3>
+                    <h3 style="font-size: 1.3em">July 19, 2014</h3>
+                </section>
+
+                <section class="about">
+                    <h2>About Me</h2>
+                    <img src="assets/img/me.jpeg" style="float: left; height: 400px; width: auto;">
+                    <h3>Will Long</h3>
+                    <ul>
+                        <li><img src="assets/img/icons/twitter.png"> @Kerasai</li>
+                        <li><img src="assets/img/icons/drupal.png"> Kerasai on D.O</li>
+                        <li><a href="#">http://kerasai.com</a></li>
+                    </ul>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Materials</h2>
+                    <ul class="list-spaced-more" style="margin:2em 0; font-size: .7em">
+                        <li>Slides: <a href="http://presentations.kerasai.com/drupalcorn-2014">http://presentations.kerasai.com/drupalcorn-2014</a></li>
+                        <li>Demonstration code: <a href="http://presentations.kerasai.com/drupalcorn-2014">http://presentations.kerasai.com/drupalcorn-2014</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Objectives</h2>
+                    <ul class="list-spaced-more" style="margin:1.5em; font-size: .9em">
+                        <li>Provide a basic understanding of data modeling in Drupal</li>
+                        <li>Identify the key concepts of fields</li>
+                        <li>Highlight opportunities for customization</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Agenda</h2>
+                    <ul class="list-spaced" style="margin:1.5em 2em; font-size: .9em">
+                        <li>Describe common data handling scenarios</li>
+                        <li>Disect components of a field</li>
+                        <li>Analyze field formatters and widgets</li>
+                        <li>Cover contrib utilities</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Data Modeling Scenarios</h2>
+                    <ul class="list-spaced-more" style="margin-top: 1em">
+                        <li>Custom records</li>
+                        <li>Piggy-backing</li>
+                        <li>Entities and Fields</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Custom Records</h2>
+                        <img src="assets/img/custom.png">
+                    </section>
+
+                    <section>
+                        <h2>Custom Records</h2>
+                        <img src="assets/img/custom-related.png">
+                    </section>
+
+                    <section>
+                        <h2>Custom Records</h2>
+                        <h3>Implementation</h3>
+                        <ul class="list-spaced">
+                            <li>Custom table(s) in hook_schema()</li>
+                            <li>API built from scratch</li>
+                            <li>Forms to handle input</li>
+                            <li>Create custom displays</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Custom Records</h2>
+                        <div style="float: left; max-width: 50%;">
+                            <h3>Pros</h3>
+                            <ul class="list-spaced" style="float: left; font-size: .8em; padding: 0 .5em">
+                                <li>Fully flexible and customizable</li>
+                                <li>Integrate with 3rd parties</li>
+                            </ul>
+                        </div>
+                        <div style="float: left; max-width: 50%;">
+                            <h3>Cons</h3>
+                            <ul class="list-spaced" style="float: left; font-size: .8em; padding: 0 .5em">
+                                <li>Large amount of effort</li>
+                                <li>High potential for bugs or security issues</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Piggy-backing</h2>
+                        <h3>Implementation</h3>
+                        <ul class="list-spaced" style="font-size: .8em">
+                            <li>Custom table in hook_schema()</li>
+                            <li>Utilize entity hooks to load and save</li>
+                            <li>Alter forms for input</li>
+                            <li>Alter entity rendering for display</li>
+                            <li>Use "extra" fields to adjust rendering.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Piggy-backing</h2>
+                        <img style="margin-top: 1em" src="assets/img/scheduler-node.png">
+                    </section>
+
+                    <section>
+                        <h2>Piggy-backing</h2>
+                        <img style="margin-top: 1em" src="assets/img/scheduler-table.png">
+                    </section>
+
+                    <section>
+                        <h2>Piggy-backing</h2>
+                        <img style="margin-top: 1em" src="assets/img/scheduler-form.png">
+                    </section>
+
+                    <section>
+                        <h2>Piggy-backing</h2>
+                        <img style="height: 500px" src="assets/img/scheduler-extra-fields.png">
+                    </section>
+
+                    <section>
+                        <h2>Piggy-backing</h2>
+                        <div style="float: left; max-width: 50%;">
+                            <h3>Pros</h3>
+                            <ul class="list-spaced" style="float: left; font-size: .8em; padding: 0 .5em">
+                                <li>Use existing input and display mechanisms</li>
+                                <li>Utilize entity functionality</li>
+                            </ul>
+                        </div>
+                        <div style="float: left; max-width: 50%;">
+                            <h3>Cons</h3>
+                            <ul class="list-spaced" style="float: left; font-size: .8em; padding: 0 .5em">
+                                <li>Limited by entity functionality</li>
+                                <li>Responsible for own data</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Entities and Fields</h2>
+                        <ul class="list-spaced" style="font-size: .8em">
+                            <li class="fragment">Text</li>
+                            <li class="fragment">Number</li>
+                            <li class="fragment">List</li>
+                            <li class="fragment">Date</li>
+                            <li class="fragment">Link</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Entities and Fields</h2>
+                        <h3>Schema</h3>
+                        <img src="assets/img/field-schema.png" style="margin-top: 1em">
+                    </section>
+
+                    <section>
+                        <h2>Entities and Fields</h2>
+                        <ul class="list-spaced-more" style="margin-top: 1.5em">
+                            <li>Priority</li>
+                            <li>Configuration storage</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Entities and Fields</h2>
+                        <div style="float: left; max-width: 50%;">
+                            <h3>Pros</h3>
+                            <ul class="list-spaced" style="float: left; font-size: .8em; padding: 0 .5em">
+                                <li>Easy to extend existing field types</li>
+                                <li>Easy to customize behavior &amp; display</li>
+                            </ul>
+                        </div>
+                        <div style="float: left; max-width: 50%;">
+                            <h3>Cons</h3>
+                            <ul class="list-spaced" style="float: left; font-size: .8em; padding: 0 .5em">
+                                <li>Fields can be unwieldy</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Field Formatters</h2>
+                    <img src="assets/img/field-formatter.png" style="margin-top: 1.5em">
+                </section>
+
+                <section>
+                    <h2>Field Widgets</h2>
+                    <img src="assets/img/field-widget.png" style="margin-top: 1.5em">
+                </section>
+
+                <section>
+                    <h2>Contrib</h2>
+                    <ul class="list-spaced-more" style="margin-top: 1em">
+                        <li>Entity API</li>
+                        <li>Entity Construction Kit</li>
+                        <li>EFQ Helper</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Questions</h2>
+                    <h3 style="margin-top: 2.5em">Thanks for attending.</h3>
+                </section>
+
+            </div>
+
+            <div class="footer">
+                <ul>
+                    <li class="first">It's Your Data--Own It!</li>
+                    <li class="last"><a href="http://kerasai.com">Kerasai.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+        <script src="assets/js/jquery-1.10.1.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: false,
+                history: true,
+                center: false,
+                transition: 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                ($('.footer')).css('font-size', this.outerHeight / 20);
+                $(window).resize(function() {
+                    ($('.footer')).css('font-size', this.outerHeight / 20);
+                });
+            });
+        </script>
+
+    </body>
+</html>
