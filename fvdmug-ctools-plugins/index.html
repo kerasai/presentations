@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>It's Your Data--Own It!</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/kerasai.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Londrina+Solid">
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-39290540-1']);
+            _gaq.push(['_setDomainName', 'kerasai.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1 style="font-size: 2em">Fun with CTools Plugins</h1>
+                    <img src="assets/img/fox-valley-drupal.png" style="height: 200px; width: auto; margin: 1.5em" />
+                    <h3>September 17, 2014</h3>
+                </section>
+
+                <section class="about">
+                    <h2>About Me</h2>
+                    <img src="assets/img/me.jpeg" style="float: left; height: 400px; width: auto;">
+                    <h3>Will Long</h3>
+                    <ul>
+                        <li><img src="assets/img/icons/twitter.png"> @Kerasai</li>
+                        <li><img src="assets/img/icons/drupal.png"> Kerasai on D.O</li>
+                        <li><a href="#">http://kerasai.com</a></li>
+                    </ul>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Objectives</h2>
+                    <ul class="list-spaced-more" style="margin:1.5em; font-size: .9em">
+                        <li>Cover what the CTools module provides</li>
+                        <li>Understand the concept of CTools plugins</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What is CTools</h2>
+                </section>
+
+                <section>
+                    <h2>Questions</h2>
+                    <h3 style="margin-top: 2.5em">Thanks for attending.</h3>
+                </section>
+
+            </div>
+
+            <div class="footer">
+                <ul>
+                    <li class="first">Fun with CTools Plugins</li>
+                    <li class="last"><a href="http://kerasai.com">Kerasai.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+        <script src="assets/js/jquery-1.10.1.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: false,
+                history: true,
+                center: false,
+                transition: 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                ($('.footer')).css('font-size', this.outerHeight / 20);
+                $(window).resize(function() {
+                    ($('.footer')).css('font-size', this.outerHeight / 20);
+                });
+            });
+        </script>
+
+    </body>
+</html>
