@@ -1,0 +1,78 @@
+html {
+    background-color: #eeeeee;
+    color: #333333;
+    cursor: default;
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+
+body {
+    border-top: .5em solid #287bb9;
+}
+
+.reveal div h1, .reveal div h2, .reveal div h3, .reveal div h4, .reveal div h5, .reveal div h6 {
+    font-family: DIN Condensed Web,Abel;
+    font-weight: bold;
+    margin-bottom: .8em;
+}
+
+.reveal div h1 {
+  font-size: 2.5em;
+}
+
+.reveal div h2 {
+    font-size: 2em;
+}
+
+.reveal div h3 {
+    font-size: 1.7em;
+}
+
+.reveal div h4 {
+    font-size: 1.5em;
+}
+
+.reveal div h5 {
+    font-size: 1.2em;
+}
+
+.reveal div h6 {
+    font-size: 1.1em;
+}
+
+a, a:visited, a:hover, a:focus {
+    color: #287bb9;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #287bb9;
+    text-decoration: underline;
+}
+
+#footer-logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+}
+
+.reveal .controls div.navigate-left {
+    border-right-color: #287bb9;
+}
+
+.reveal .controls div.navigate-right {
+    border-left-color: #287bb9;
+}
+
+.reveal .controls div.navigate-up {
+    border-bottom-color: #287bb9;
+}
+
+.reveal .controls div.navigate-down {
+    border-top-color: #287bb9;
+}
