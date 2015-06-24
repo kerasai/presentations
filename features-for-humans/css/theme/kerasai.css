@@ -108,6 +108,10 @@ html {
     font-size: .85em;
 }
 
+.list li {
+    margin-bottom: .2em;
+}
+
 .list-spaced li {
     margin-bottom: .5em;
 }

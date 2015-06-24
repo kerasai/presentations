@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Fun with CTools Plugins</title>
+        <title>Features Explained for Humans</title>
 
         <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
         <meta name="author" content="Hakim El Hattab">
@@ -83,16 +83,30 @@
                         </div>
                     </div>
                     <aside class="notes">
+                        <p>Backend developer and Drupal architect</p>
+                        <p>Run company in Chicago area, work quite a bit with BT</p>
+                        <p>Experience as developer brings me to [next]</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>What is Features?</h2>
+                    <h3 class="fragment" style="margin-top: 2em">... And Why Do We Need It?</h3>
+                    <aside class="notes">
+                        <p>You may be asking...</p>
+                        <p>Common for development to put Configuration in code, Drupal notoriously bad about storing in DB.</p>
+                        <p>Allows for sharing config (between developers, environments, projects), VCS</p>
                     </aside>
                 </section>
 
                 <section>
                     <h2>Objectives</h2>
                     <div class="row">
-                        <div class="col col-12">
-                            <ul class="list-spaced-more" style="margin:1.5em; font-size: .9em">
-                                <li>Cover what the CTools module provides</li>
-                                <li>Understand the concept of CTools plugins</li>
+                        <div class="col col-10 offset-1">
+                            <ul class="list-spaced-more" style="margin-top: .5em">
+                                <li>Attain sufficient understanding of Features</li>
+                                <li>Understand how to architect Feature modules</li>
+                                <li>Acquire the capability to deploy changes using Features</li>
                             </ul>
                         </div>
                     </div>
@@ -103,10 +117,12 @@
                 <section>
                     <h2>Agenda</h2>
                     <div class="row">
-                        <div class="col col-12">
-                            <ul class="list-spaced-more" style="margin:1.5em; font-size: .9em">
-                                <li>Cover what the CTools module provides</li>
-                                <li>Understand the concept of CTools plugins</li>
+                        <div class="col col-10 offset-1">
+                            <ul class="list-spaced-more" style="margin-top: 1.5em">
+                                <li>How Features, et al., works</li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
                             </ul>
                         </div>
                     </div>
@@ -122,7 +138,64 @@
                         </div>
                     </div>
                     <aside class="notes">
+                        <p>A lot of fear/confusion.</p>
+                        <p>Let's clear this up, make it simple.</p>
                     </aside>
+                </section>
+
+                <section>
+                    <h2>Features</h2>
+                    <h3>The Basics</h3>
+                    <div class="row">
+                        <div class="col col-10">
+                            <ul class="list-spaced-more" style="margin-top:1em">
+                                <li>Analyze a site's configuration</li>
+                                <li>Write code representing configuration</li>
+                                <li>Set configuration as defined in files</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+
+                <section>
+                    <section>
+                        <h2 style="font-size: 1.5em">Features-Integrated Modules</h2>
+                        <div class="row">
+                            <div class="col col-10">
+                                <img src="assets/img/features-create-components.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Features-Integration</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <ul class="list" style="margin:.5em 0">
+                                    <li><code>hook_features_api()</code></li>
+                                    <li><code>hook_features_export()</code></li>
+                                    <li><code>hook_features_export_options()</code></li>
+                                    <li><code>hook_features_export_render()</code></li>
+                                    <li><code>hook_features_revert()</code></li>
+                                    <li><code>hook_features_rebuild()</code></li>
+                                </ul>
+                                <p>See <code>features.api.php</code>.</p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>hook_features_api(): Declare component types</p>
+                            <p>hook_features_export(): Declare components to bundle</p>
+                            <p>hook_features_export_options(): Enumerate (list) all instances of component</p>
+                            <p>hook_features_export_render(): Writes PHP code that represents a component</p>
+                            <p>hook_features_revert(): Clears-out overridden config from DB</p>
+                            <p>hook_features_rebuild(): Sets config into database (faux)</p>
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
