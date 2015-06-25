@@ -124,6 +124,14 @@ html {
     margin-bottom: .8em;
 }
 
+.list-spaced-big li {
+    margin-bottom: 1em;
+}
+
+.list-spaced-most li {
+    margin-bottom: 2em;
+}
+
 .reveal .about ul {
     line-height: 2em;
     list-style-type: none;
