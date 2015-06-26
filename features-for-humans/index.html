@@ -91,7 +91,7 @@
 
                 <section>
                     <h2>What is Features?</h2>
-                    <h3 class="fragment" style="margin-top: 2em">... And Why Do We Need It?</h3>
+                    <h3 class="fragment" style="margin-top: 2em">... And Why Do I Need It?</h3>
                     <aside class="notes">
                         <p>You may be asking...</p>
                         <p>Common for development to put Configuration in code, Drupal notoriously bad about storing in DB.</p>
@@ -105,7 +105,7 @@
                         <div class="col col-10 offset-1">
                             <ul class="list-spaced-more" style="margin-top: .5em">
                                 <li>Attain sufficient understanding of Features</li>
-                                <li>Understand how to architect Feature modules</li>
+                                <li>Understand how to architect and manage Feature modules</li>
                                 <li>Acquire the capability to deploy changes using Features</li>
                             </ul>
                         </div>
@@ -166,7 +166,7 @@
                         <h2 style="font-size: 1.5em">Features-Integrated Modules</h2>
                         <div class="row">
                             <div class="col col-12 center">
-                                <img src="assets/img/features-create-components.png">
+                                <img src="assets/img/features-create.png" style="border: 1px solid #333">
                             </div>
                         </div>
                         <aside class="notes">
@@ -177,7 +177,7 @@
                     <section>
                         <h2>Features-Integration</h2>
                         <div class="row">
-                            <div class="col col-12">
+                            <div class="col col-12" style="font-size: .7em">
                                 <ul class="list" style="margin:.5em 0">
                                     <li><code>hook_features_api()</code></li>
                                     <li><code>hook_features_export()</code></li>
@@ -208,6 +208,7 @@
                                 <ul class="list-spaced-more" style="margin-top:1.5em">
                                     <li>Written by Features</li>
                                     <li>Just like any other module</li>
+                                    <li>Additional metadata in <code>.info</code> file</li>
                                     <li>Implements <code>default</code> hooks</li>
                                 </ul>
                             </div>
@@ -221,7 +222,7 @@
                         <h2>.INFO File</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <img src="assets/img/features-create-components.png">
+                                <img src="assets/img/info.png" style="border: 1px solid #333">
                             </div>
                         </div>
                         <aside class="notes">
@@ -232,7 +233,7 @@
                         <h2>.MODULE File</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <img src="assets/img/features-create-components.png">
+                                <img src="assets/img/module.png" style="border: 1px solid #333; margin-top: 1em">
                             </div>
                         </div>
                         <aside class="notes">
@@ -245,7 +246,7 @@
                         <h2>*.FEATURES.INC File</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <img src="assets/img/features-create-components.png">
+                                <img src="assets/img/features-inc.png" style="border: 1px solid #333">
                             </div>
                         </div>
                         <aside class="notes">
@@ -255,10 +256,9 @@
                     </section>
 
                     <section>
-                        <h2>Other *.INC Files</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <img src="assets/img/features-create-components.png">
+                                <img src="assets/img/features-field-inc.png" style="width: 400px; border: 1px solid #333">
                             </div>
                         </div>
                         <aside class="notes">
@@ -306,7 +306,7 @@
                         <h2>Exportable Components</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <img src="assets/img/workingoncar.jpg" style="width: 600px; margin-top: 1em">
+                                <img src="assets/img/exportable.png" style="margin-top: 2em">
                             </div>
                         </div>
                         <aside class="notes">
@@ -319,7 +319,7 @@
                         <h2>Faux-Exportable</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <img src="assets/img/workingoncar.jpg" style="width: 600px; margin-top: 1em">
+                                <img src="assets/img/faux-exp.png" style="margin-top: 2em">
                             </div>
                         </div>
                         <aside class="notes">
@@ -413,6 +413,8 @@
                     </section>
                 </section>
 
+                <!-- architecture -->
+
                 <section>
                     <section>
                         <h2>Contrib</h2>
@@ -441,6 +443,7 @@
                         <h3>Drupal Variables</h3>
                         <div class="row">
                             <div class="col col-12">
+                                <img src="assets/img/strongarm.png" style="border: 1px solid #333; width: 800px">
                             </div>
                         </div>
                         <aside class="notes">
@@ -451,6 +454,25 @@
                         <h2>Diff</h2>
                         <div class="row">
                             <div class="col col-12">
+                                <img src="assets/img/diff.png" style="border: 1px solid #333">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Features Builder</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <ul class="list-spaced-big">
+                                    <li>Automatically Organizes Features</li>
+                                    <li>Rapidly Captures Changes</li>
+                                    <li>Customizable Architecture</li>
+                                </ul>
+                                <p>
+                                    <a href="https://www.drupal.org/project/features_builder" style="font-size: .8em">https://www.drupal.org/project/features_builder</a>
+                                </p>
                             </div>
                         </div>
                         <aside class="notes">
