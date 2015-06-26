@@ -202,12 +202,12 @@
 
                 <section>
                     <section>
-                        <h2 style="font-size: 1.5em">Feature Modules</h2>
+                        <h2>Feature Modules</h2>
                         <div class="row">
                             <div class="col col-10 offset-1">
-                                <ul class="list-spaced-more" style="margin-top:1.5em">
-                                    <li>Written by Features</li>
+                                <ul class="list-spaced-more" style="margin-top:.5em">
                                     <li>Just like any other module</li>
+                                    <li>Written by Features</li>
                                     <li>Additional metadata in <code>.info</code> file</li>
                                     <li>Implements <code>default</code> hooks</li>
                                 </ul>
@@ -418,13 +418,27 @@
                         <aside class="notes">
                             <p>Two main philosophies.</p>
                             <p>Preference of builder.</p>
+                            <p>Easy to understand organization.</p>
                         </aside>
                     </section>
                     <section>
-                        <h2 style="font-size: 1.7em">Feature-Based Architecture</h2>
-                        <div class="row">
-                            <div class="col col-12">
-                                <img src="#" style="margin-top: 1em">
+                        <h2 style="font-size: 1.7em">Function-Based Architecture</h2>
+                        <h3 style="font-size: 1.7em">Image Gallery</h3>
+                        <div class="row" style="font-size: .8em; margin-top: 2em">
+                            <div class="col col-6">
+                                <ul class="list-spaced-more">
+                                    <li>Content Type: Image</li>
+                                    <li>Field: field_image</li>
+                                    <li>Permissions: Image add/edit/delte</li>
+                                </ul>
+                            </div>
+                            <div class="col col-6">
+                                <ul class="list-spaced-more">
+                                    <li>Dependency: Flexslider</li>
+                                    <li>Dependency: Image</li>
+                                    <li>Dependency: Views</li>
+                                    <li>View: slideshow</li>
+                                </ul>
                             </div>
                         </div>
                         <aside class="notes">
@@ -434,7 +448,29 @@
                         <h2 style="font-size: 1.6em">Component-Based Architecture</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <img src="#" style="margin-top: 1em">
+                                <div class="row" style="font-size: .8em; margin-top: 2em">
+                                    <div class="col col-6">
+                                        <ul class="list-spaced-more">
+                                            <li>Fields</li>
+                                            <li>General Configuration</li>
+                                            <li>Media</li>
+                                            <li>SEO</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-6">
+                                        <ul class="list-spaced-more">
+                                            <li>Node Type</li>
+                                            <li>Users</li>
+                                            <li>Views</li>
+                                            <li>Panels</li>
+                                        </ul>
+                                    </div>
+                                    <div style="clear: both">
+                                        <p>
+                                            <a href="http://kerasai.com/blog/2014/04/08/organizing-features-configuration-managment" style="font-size: .63em">http://kerasai.com/blog/2014/04/08/organizing-features-configuration-managment</a>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <aside class="notes">
@@ -527,6 +563,7 @@
                         <div class="row" style="margin-top: 0">
                             <div class="col col-12">
                                 <ul class="list-spaced">
+                                    <li><code>drush fdiff</code></li>
                                     <li><code>drush fu</code></li>
                                     <li><code>drush fr</code></li>
                                     <li><code>drush fra --force</code></li>
