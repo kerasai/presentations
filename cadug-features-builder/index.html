@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Features &amp; the Features Builder</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/kerasai.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Londrina+Solid">
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-39290540-1']);
+            _gaq.push(['_setDomainName', 'kerasai.com']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <div class="row">
+                        <div class="col col-12 center">
+                            <h1 style="font-size: 1.5em">Features &amp; the Features Builder</h1>
+                            <img src="assets/img/cadug.jpeg" style="height: 350px; width: auto; margin: .5em" />
+                            <h3 style="font-size: 1.2em">Drupal Chicago General Meetup</h3>
+                            <h3 style="font-size: 1em">January 21, 2016</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about">
+                    <h2>About Me</h2>
+                    <h3>Will Long</h3>
+                    <div class="row">
+                        <div class="col col-5 center">
+                            <img src="assets/img/me.jpeg" style="height: 350px; width: auto;">
+                        </div>
+                        <div class="col col-7">
+                            <ul>
+                                <li><img src="assets/img/icons/twitter.png"> @Kerasai</li>
+                                <li><img src="assets/img/icons/drupal.png"> Kerasai on D.O</li>
+                                <li><a href="#">http://kerasai.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                        <p>Backend developer and Drupal architect</p>
+                        <p>Run consultancy in Chicago area</p>
+                        <p>Experience as developer brings me to [next]</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Objectives</h2>
+                    <div class="row">
+                        <div class="col col-10 offset-1">
+                            <ul class="list-spaced" style="margin-top: .3em">
+                                <li>Obtain a basic understanding of Features</li>
+                                <li>Understand the operation of Features Builder</li>
+                                <li>Use Features Builder to manage your Features modules</li>
+                                <li>Customize/enhance the Features Builder packaging scheme</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Agenda</h2>
+                    <div class="row">
+                        <div class="col col-10 offset-1">
+                            <ul class="list-spaced-big" style="margin-top: 1.5em">
+                                <li>Brief Features Primer</li>
+                                <li>What is Features Builder</li>
+                                <li>Features Builder Usage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>What is Features?</h2>
+                        <img src="assets/img/grim.png" style="margin-top: 1em; height: 350px; width: auto;">
+                        <aside class="notes">
+                            <p>You may be asking...</p>
+                            <p>Common for development to put Configuration in code, Drupal notoriously bad about storing in DB.</p>
+                            <p>Allows for sharing config (between developers, environments, projects), VCS</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Features</h2>
+                        <h3>The Basics</h3>
+                        <div class="row">
+                            <div class="col col-10 offset-1">
+                                <ul class="list-spaced-more" style="margin-top:1em">
+                                    <li>Analyze a site's configuration</li>
+                                    <li>Write code representing configuration</li>
+                                    <li>Set configuration as defined in files</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2 style="font-size: 1.5em">Features Integrated Modules</h2>
+                        <div class="row">
+                            <div class="col col-12 center">
+                                <img src="assets/img/features-create.png" style="border: 1px solid #333">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Provide components</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Features Integration</h2>
+                        <div class="row">
+                            <div class="col col-12" style="font-size: .7em">
+                                <ul class="list" style="margin:.5em 0">
+                                    <li><code>hook_features_api()</code></li>
+                                    <li><code>hook_features_export()</code></li>
+                                    <li><code>hook_features_export_options()</code></li>
+                                    <li><code>hook_features_export_render()</code></li>
+                                    <li><code>hook_features_revert()</code></li>
+                                    <li><code>hook_features_rebuild()</code></li>
+                                </ul>
+                                <p>See <code>features.api.php</code>.</p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>hook_features_api(): Declare component types</p>
+                            <p>hook_features_export(): Declare components to bundle</p>
+                            <p>hook_features_export_options(): Enumerate (list) all instances of component</p>
+                            <p>hook_features_export_render(): Writes PHP code that represents a component</p>
+                            <p>hook_features_revert(): Clears-out overridden config from DB</p>
+                            <p>hook_features_rebuild(): Sets config into database (faux)</p>
+                            <p>CTools does this for you</p>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Feature Modules</h2>
+                        <div class="row">
+                            <div class="col col-10 offset-1">
+                                <ul class="list-spaced-more" style="margin-top:.5em">
+                                    <li>Just like any other module</li>
+                                    <li>Written by Features</li>
+                                    <li>Additional metadata in <code>.info</code> file</li>
+                                    <li>Various <code>.inc</code> files</li>
+                                    <li>Implements <code>default</code> hooks</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p></p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Recap</h2>
+                        <div class="row" style="margin-top: 1.7em">
+                            <div class="col col-6">
+                                <ul class="list-spaced-big" style="">
+                                    <li>Features Module</li>
+                                    <li>Features-Integrated Modules</li>
+                                    <li>Feature Modules</li>
+                                </ul>
+                            </div>
+                            <div class="col col-5 offset-1">
+                                <ul class="list-spaced-most" style="">
+                                    <li>Component Types</li>
+                                    <li>Components</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Working with Features</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/workingoncar.jpg" style="width: 600px; margin-top: 1em">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Covered the "how it works", now on to making it work for you.</p>
+                            <p>Before the workflow, need to discus exportability--it's important.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Faux-Exportable</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/faux-exp.png" style="margin-top: 2em">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Faux: made in imitation; artificial. not genuine; fake or false.</p>
+                            <p>Default hook is only to work with Features.</p>
+                            <p>See this a lot where Features-integration is not provided by the module that provides the "thing".</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Exportable</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/exportable.png" style="margin-top: 2em">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>CTools - Views, Panels, Context</p>
+                            <p>Nice for working with VCS</p>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Feature States</h2>
+                        <div class="row" style="margin-top: 2em">
+                            <div class="col col-6">
+                                <ul class="list-spaced-big" style="">
+                                    <li>Default</li>
+                                    <li>Overridden</li>
+                                </ul>
+                            </div>
+                            <div class="col col-6">
+                                <ul class="list-spaced-big" style="">
+                                    <li>Needs Review</li>
+                                    <li>Rebuilding</li>
+                                    <li>Conflict</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Default/Overridden common, others probably need reverted.</p>
+                            <p>Default is good, keep 'em defaulted.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Overridden</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/overridden.png" style="margin-top: 2em">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Database overriding code.</p>
+                            <p>Happens when changes get merged in from remote, switching branches.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Feature Update</h2>
+                        <h3>Write Your Configuration to Code</h3>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/update.png" style="margin-top: 1em">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Keep the change.</p>
+                            <p>Module providing component provides new export, Features writes code running on the site with new config (default hook)</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Feature Revert</h2>
+                        <h3>Use Configuration from Code</h3>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/revert.png" style="margin-top: 1em">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Faux exportable, put config defined in code into DB.</p>
+                            <p>This is the "Rebuild" process.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Feature Revert</h2>
+                        <h3>Use Configuration from Code</h3>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/revert-exp.png" style="margin-top: 1em">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Exportable, just clear overridden config from DB.</p>
+                            <p>Cache clear needed in most cases</p>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Architecting Features</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/architecture.jpg" style="max-height: 400px">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Two main philosophies.</p>
+                            <p>Preference of builder.</p>
+                            <p>Easy to understand organization.</p>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2 style="font-size: 1.7em">Function-Based Architecture</h2>
+                        <h3 style="font-size: 1.7em">Image Gallery</h3>
+                        <div class="row" style="font-size: .8em; margin-top: 2em">
+                            <div class="col col-6">
+                                <ul class="list-spaced-more">
+                                    <li>Content Type: Image</li>
+                                    <li>Field: field_image</li>
+                                    <li>Permissions: Image add/edit/delte</li>
+                                </ul>
+                            </div>
+                            <div class="col col-6">
+                                <ul class="list-spaced-more">
+                                    <li>View: slideshow</li>
+                                    <li>Dependency: Flexslider</li>
+                                    <li>Dependency: Image</li>
+                                    <li>Dependency: Views</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                    <section>
+                        <h2 style="font-size: 1.6em">Component-Based Architecture</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <div class="row" style="font-size: .8em; margin-top: 1em">
+                                    <div class="col col-6">
+                                        <ul class="list-spaced">
+                                            <li>Fields</li>
+                                            <li>General Site Config</li>
+                                            <li>Media</li>
+                                            <li>SEO</li>
+                                            <li>Node Type</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-6">
+                                        <ul class="list-spaced">
+                                            <li>Taxonomy</li>
+                                            <li>Users</li>
+                                            <li>Panels</li>
+                                            <li>Views</li>
+                                        </ul>
+                                    </div>
+                                    <div style="clear: both">
+                                        <p>
+                                            <a href="http://kerasai.com/blog/2014/04/08/organizing-features-configuration-managment" style="font-size: .63em">http://kerasai.com/blog/2014/04/08/organizing-features-configuration-managment</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Features Builder uses this scheme</p>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Strongarm</h2>
+                        <h3>Drupal Variables</h3>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <ul class="list-spaced-more">
+                                    <li>Site name, slogan</li>
+                                    <li>Default publishing options</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Diff</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/diff.png" style="border: 1px solid #333">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Drush</h2>
+                        <div class="row" style="margin-top: 1em">
+                            <div class="col col-12">
+                                <p style="margin-bottom: 1em;" class="fragment">Use it.</p>
+                                <p style="margin-bottom: 1em;"  class="fragment">Use it a lot.</p>
+                                <p class="fragment">Then use it more.</p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Config from code on left, current config on right</p>
+                            <p>Update to keep, revert to discard</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Drush</h2>
+                        <div class="row" style="margin-top: 1em">
+                            <div class="col col-12">
+                                <ul class="list-spaced">
+                                    <li><code>drush fl</code></li>
+                                    <li><code>drush fdiff</code></li>
+                                    <li><code>drush fu</code></li>
+                                    <li><code>drush fr</code></li>
+                                    <li><code>drush fra --force</code></li>
+                                    <li class="fragment"><code>drush fb</code> !!!</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Features Builder</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <ul class="list-spaced-big">
+                                    <li>Automatically Organizes Features</li>
+                                    <li>Rapidly Captures Changes</li>
+                                    <li>Customizable Architecture</li>
+                                </ul>
+                                <p>
+                                    <a href="https://www.drupal.org/project/features_builder" style="font-size: .8em">https://www.drupal.org/project/features_builder</a>
+                                </p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Why Would We Need This?</h2>
+                        <div class="row">
+                            <p>Placeholder for "why" slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5em;">Enough with the Sales Pitch</h2>
+                        <h3 style="font-size: 1.2em;">What is it, really?</h3>
+                        <div class="col col-12" style="margin-top: 1.5em">
+                            <ul class="list-spaced-most">
+                                <li>API for declaring builders</li>
+                                <li>Default set of builders</li>
+                            </ul>
+                        </div>
+                        <aside class="notes">
+                            <p>Hooks to tell FB about the builders, alter the builder output</p>
+                            <p>Default builders use "component-based" packaging</p>
+                            <p>Piece of cake</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2 style="font-size: 1.5em">How Does Features Builder Work?</h2>
+                        <div class="col col-12" style="margin-top: .5em">
+                            <ul class="list-spaced">
+                                <li>Builders analyze available components, provide packaging info</li>
+                                <li>Features Builder compiles the packaging info from all Builders to form a manifest</li>
+                                <li>Features Builder determines dependencies, puts the manifest in order</li>
+                                <li>Features Builder passes-off the Feature writing to Features</li>
+                            </ul>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>What's a Builder?</h2>
+                        <div class="col col-12" style="margin-top: 1em">
+                            <ul class="list-spaced-more" style="width: 550px">
+                                <li>Object-oriented</li>
+                                <li>Provides a list of Features it may create</li>
+                                <li>Computes a list of components for each Features it is creating</li>
+                            </ul>
+                        </div>
+                        <aside class="notes">
+                            <p>OOP: interface for listing features and setting components</p>
+                            <p>OOP: override classes for easy creation of new builders</p>
+                            <p>OOP: base classes for finding components, packaging entities</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Example Builders</h2>
+                        <div class="row">
+                            <p>Placeholder for "example builders" slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Core Coverage</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <div class="row" style="font-size: .8em; margin-top: 1em">
+                                    <div class="col col-6">
+                                        <ul class="list-spaced">
+                                            <li>Fields</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-6">
+                                        <ul class="list-spaced">
+                                            <li>Taxonomy</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Contrib Coverage</h2>
+                        <div class="row">
+                            <p>Placeholder for "contrib coverage" slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Using Features Builder</h2>
+                        <div class="row">
+                            <p>Placeholder for "using FB" (installation) slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Advanced Usage</h2>
+                        <div class="row">
+                            <p>Placeholder for "advanced usage" (API) slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Leveraging Base Classes</h2>
+                        <div class="row">
+                            <p>Placeholder for "base classes" (API) slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Shortcomings</h2>
+                    <div class="row">
+                        <p>Placeholder for "shortcomings" slide.</p>
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Final Thoughts</h2>
+                    <div class="row">
+                        <img src="assets/img/thinking.jpg" style="margin-top: .8em">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Questions</h2>
+                    <div class="row">
+                        <h3 style="margin-top: 2.5em">Thanks for attending.</h3>
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+            </div>
+
+            <div class="footer">
+                <ul>
+                    <li class="first">Features &amp; the Features Builder</li>
+                    <li class="last"><a href="http://kerasai.com">Kerasai.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+        <script src="assets/js/jquery-1.10.1.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: false,
+                history: true,
+                center: false,
+                transition: 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    {src: 'lib/js/classList.js', condition: function() {
+                            return !document.body.classList;
+                        }},
+                    {src: 'plugin/markdown/marked.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/markdown/markdown.js', condition: function() {
+                            return !!document.querySelector('[data-markdown]');
+                        }},
+                    {src: 'plugin/highlight/highlight.js', async: true, callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }},
+                    {src: 'plugin/zoom-js/zoom.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }},
+                    {src: 'plugin/notes/notes.js', async: true, condition: function() {
+                            return !!document.body.classList;
+                        }}
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                ($('.footer')).css('font-size', this.outerHeight / 20);
+                $(window).resize(function() {
+                    ($('.footer')).css('font-size', this.outerHeight / 20);
+                });
+            });
+        </script>
+
+    </body>
+</html>
