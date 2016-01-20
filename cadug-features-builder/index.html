@@ -526,13 +526,15 @@
                     <section>
                         <h2 style="font-size: 1.5em;">Enough with the Sales Pitch</h2>
                         <h3 style="font-size: 1.2em;">What is it, really?</h3>
-                        <div class="col col-12" style="margin-top: 1.5em">
-                            <ul class="list-spaced-most">
+                        <div class="col col-12" style="margin-top: 1em">
+                            <ul class="list-spaced-more" style="max-width: 600px">
                                 <li>API for declaring builders</li>
                                 <li>Default set of builders</li>
+                                <li>Uses Builders to generate Feature module code</li>
                             </ul>
                         </div>
                         <aside class="notes">
+                            <p>What's a builder?</p>
                             <p>Hooks to tell FB about the builders, alter the builder output</p>
                             <p>Default builders use "component-based" packaging</p>
                             <p>Piece of cake</p>
@@ -552,9 +554,7 @@
                         <aside class="notes">
                         </aside>
                     </section>
-                </section>
 
-                <section>
                     <section>
                         <h2>What's a Builder?</h2>
                         <div class="col col-12" style="margin-top: 1em">
@@ -568,15 +568,6 @@
                             <p>OOP: interface for listing features and setting components</p>
                             <p>OOP: override classes for easy creation of new builders</p>
                             <p>OOP: base classes for finding components, packaging entities</p>
-                        </aside>
-                    </section>
-
-                    <section>
-                        <h2>Example Builders</h2>
-                        <div class="row">
-                            <p>Placeholder for "example builders" slide.</p>
-                        </div>
-                        <aside class="notes">
                         </aside>
                     </section>
 
@@ -663,7 +654,7 @@
                     </section>
 
                     <section>
-                        <h2>Using Features Builder</h2>
+                        <h2>Build Operation</h2>
                         <div class="row">
                             <img src="assets/img/build.png" style="margin: 1em">
                             <p><code>drush fb [--enable] [-y]</code></p>
@@ -694,7 +685,6 @@
                         <div class="row">
                             <div class="col col-12" style="margin-top: 1em; font-size: .8em">
                                 <ul class="list-spaced-more">
-                                    <li>Implement <code>FeaturesBuilderInterface</code> interface</li>
                                     <li>Extend <code>FeaturesBuilderBase</code> class</li>
                                     <li>Identify components in <code>setComponents()</code> method</li>
                                     <li><code style="font-size: .7em">$this->components['views_view']['frontpage'] = TRUE;</code></li>
