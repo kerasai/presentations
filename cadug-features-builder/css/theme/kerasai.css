@@ -249,3 +249,12 @@ html {
 .col.center {
     text-align: center;
 }
+
+.reveal p.credit {
+    font-size: .5em;
+    font-style: italic;
+}
+
+.reveal code {
+    background-color: #eeeeee;
+}
