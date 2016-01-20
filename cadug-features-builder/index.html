@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="col col-12 center">
                             <h1 style="font-size: 1.5em">Features &amp; the Features Builder</h1>
-                            <img src="assets/img/cadug.jpeg" style="height: 350px; width: auto; margin: .5em" />
+                            <img src="assets/img/cadug.jpeg" style="height: 300px; width: auto; margin: .5em" />
                             <h3 style="font-size: 1.2em">Drupal Chicago General Meetup</h3>
                             <h3 style="font-size: 1em">January 21, 2016</h3>
                         </div>
@@ -94,7 +94,7 @@
                     <h2>Objectives</h2>
                     <div class="row">
                         <div class="col col-10 offset-1">
-                            <ul class="list-spaced" style="margin-top: .3em">
+                            <ul class="list-spaced" style="margin-top: .3em; font-size: .8em">
                                 <li>Obtain a basic understanding of Features</li>
                                 <li>Understand the operation of Features Builder</li>
                                 <li>Use Features Builder to manage your Features modules</li>
@@ -124,7 +124,8 @@
                 <section>
                     <section>
                         <h2>What is Features?</h2>
-                        <img src="assets/img/grim.png" style="margin-top: 1em; height: 350px; width: auto;">
+                        <img src="assets/img/grim.png" style="margin: 1em 0; height: 300px; width: auto;">
+                        <p class="credit">Credit: Aimee Degnan - Hook 42</p>
                         <aside class="notes">
                             <p>You may be asking...</p>
                             <p>Common for development to put Configuration in code, Drupal notoriously bad about storing in DB.</p>
@@ -137,7 +138,7 @@
                         <h3>The Basics</h3>
                         <div class="row">
                             <div class="col col-10 offset-1">
-                                <ul class="list-spaced-more" style="margin-top:1em">
+                                <ul class="list-spaced-more" style="margin-top:.5em">
                                     <li>Analyze a site's configuration</li>
                                     <li>Write code representing configuration</li>
                                     <li>Set configuration as defined in files</li>
@@ -469,7 +470,7 @@
 
                     <section>
                         <h2>Drush</h2>
-                        <div class="row" style="margin-top: 1em">
+                        <div class="row" style="margin-top: .5em">
                             <div class="col col-12">
                                 <ul class="list-spaced">
                                     <li><code>drush fl</code></li>
@@ -506,9 +507,17 @@
                     </section>
 
                     <section>
-                        <h2>Why Would We Need This?</h2>
+                        <h2 style="font-size: 1.5em;">Why on Earth Do We Need This?</h2>
                         <div class="row">
-                            <p>Placeholder for "why" slide.</p>
+                            <div class="col col-4">
+                                <img src="assets/img/mc1.png" style="width: 100%; max-height: 500px">
+                            </div>
+                            <div class="col col-4">
+                                <img src="assets/img/mc2.png" style="width: 100%; max-height: 500px">
+                            </div>
+                            <div class="col col-4">
+                                <img src="assets/img/mc3.png" style="width: 100%; max-height: 500px">
+                            </div>
                         </div>
                         <aside class="notes">
                         </aside>
@@ -532,7 +541,7 @@
 
                     <section>
                         <h2 style="font-size: 1.5em">How Does Features Builder Work?</h2>
-                        <div class="col col-12" style="margin-top: .5em">
+                        <div class="col col-12" style="margin-top: .2em; font-size: .8em">
                             <ul class="list-spaced">
                                 <li>Builders analyze available components, provide packaging info</li>
                                 <li>Features Builder compiles the packaging info from all Builders to form a manifest</li>
@@ -575,15 +584,25 @@
                         <h2>Core Coverage</h2>
                         <div class="row">
                             <div class="col col-12">
-                                <div class="row" style="font-size: .8em; margin-top: 1em">
+                                <div class="row" style="font-size: .8em; margin-top: .5em">
                                     <div class="col col-6">
                                         <ul class="list-spaced">
+                                            <li>Content types</li>
                                             <li>Fields</li>
+                                            <li>File handling</li>
+                                            <li>Image presets</li>
+                                            <li>Menus</li>
+                                            <li>Site Settings</li>
                                         </ul>
                                     </div>
                                     <div class="col col-6">
                                         <ul class="list-spaced">
+                                            <li>Search</li>
                                             <li>Taxonomy</li>
+                                            <li>Text formats</li>
+                                            <li>Theme configs</li>
+                                            <li>Roles &amp; permissions</li>
+                                            <li>User configs</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -596,7 +615,30 @@
                     <section>
                         <h2>Contrib Coverage</h2>
                         <div class="row">
-                            <p>Placeholder for "contrib coverage" slide.</p>
+                            <div class="col col-12">
+                                <div class="row" style="font-size: .8em; margin-top: .5em">
+                                    <div class="col col-6">
+                                        <ul class="list-spaced">
+                                            <li>CKEditor</li>
+                                            <li>ECK</li>
+                                            <li>Feeds</li>
+                                            <li>Flag</li>
+                                            <li>Message</li>
+                                            <li>Organic Groups</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-6">
+                                        <ul class="list-spaced">
+                                            <li>Panels</li>
+                                            <li>Pathauto</li>
+                                            <li>Profile2</li>
+                                            <li>SearchAPI</li>
+                                            <li>Webform</li>
+                                            <li>WYSIWYG</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <aside class="notes">
                         </aside>
@@ -607,16 +649,41 @@
                     <section>
                         <h2>Using Features Builder</h2>
                         <div class="row">
-                            <p>Placeholder for "using FB" (installation) slide.</p>
+                            <div class="col col-12" style="font-size: .8em;">
+                                <ul class="list-spaced-more">
+                                    <li><a href="https://www.drupal.org/project/features_builder">https://www.drupal.org/project/features_builder</a></li>
+                                    <li>Enable <code>Features Builder</code> and <code>Features Builder Default</code> modules</li>
+                                    <li>Run the build operation</li>
+                                    <li>Review and commit changes</li>
+                                </ul>
+                            </div>
                         </div>
                         <aside class="notes">
                         </aside>
                     </section>
 
                     <section>
-                        <h2>Advanced Usage</h2>
+                        <h2>Using Features Builder</h2>
                         <div class="row">
-                            <p>Placeholder for "advanced usage" (API) slide.</p>
+                            <img src="assets/img/build.png" style="margin: 1em">
+                            <p><code>drush fb [--enable] [-y]</code></p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Features Builder API</h2>
+                        <h3>Customizing the Build</h3>
+                        <div class="row" style="font-size: .7em">
+                            <div class="col col-12">
+                                <ul class="list-spaced">
+                                    <li><code>hook_features_builders_info()</code></li>
+                                    <li><code>hook_features_builders_info_alter()</code></li>
+                                    <li><code>hook_features_builder_components_BUILDER_alter()</code></li>
+                                    <li><code>hook_features_builder_export_BUILDER_alter()</code></li>
+                                </ul>
+                            </div>
                         </div>
                         <aside class="notes">
                         </aside>
@@ -625,7 +692,43 @@
                     <section>
                         <h2>Leveraging Base Classes</h2>
                         <div class="row">
-                            <p>Placeholder for "base classes" (API) slide.</p>
+                            <div class="col col-12" style="margin-top: 1em; font-size: .8em">
+                                <ul class="list-spaced-more">
+                                    <li>Implement <code>FeaturesBuilderInterface</code> interface</li>
+                                    <li>Extend <code>FeaturesBuilderBase</code> class</li>
+                                    <li>Identify components in <code>setComponents()</code> method</li>
+                                    <li><code style="font-size: .7em">$this->components['views_view']['frontpage'] = TRUE;</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>FeaturesBuilderBase</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1.5em; font-size: .6em">
+                                <ul class="list-spaced-most">
+                                    <li><code>$this->setAllComponents('node');</code></li>
+                                    <li><code>$this->setNamedComponents('node', array('article'));</code></li>
+                                    <li><code>$this->setRegexComponents('variable', '/^user_.*/');</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>EntityFeaturesBuilder</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1.5em">
+                                <ul class="list-spaced-most">
+                                    <li>Handles field-related configuration</li>
+                                    <li><code style="font-size: .6em">$this->setFields($entity_type, $bundle);</code></li>
+                                </ul>
+                            </div>
                         </div>
                         <aside class="notes">
                         </aside>
@@ -633,21 +736,32 @@
                 </section>
 
                 <section>
-                    <h2>Shortcomings</h2>
-                    <div class="row">
-                        <p>Placeholder for "shortcomings" slide.</p>
-                    </div>
-                    <aside class="notes">
-                    </aside>
-                </section>
+                    <section>
+                        <h2>Final Thoughts</h2>
+                        <div class="row">
+                            <img src="assets/img/thinking.jpg" style="margin-top: .8em">
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
 
-                <section>
-                    <h2>Final Thoughts</h2>
-                    <div class="row">
-                        <img src="assets/img/thinking.jpg" style="margin-top: .8em">
-                    </div>
-                    <aside class="notes">
-                    </aside>
+                    <section>
+                        <h2>Shortcomings</h2>
+                        <div class="row">
+                            <p>Placeholder for "shortcomings" slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Remaining Tasks</h2>
+                        <div class="row">
+                            <p>Placeholder for "remaining tasks" slide.</p>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
