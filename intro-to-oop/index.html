@@ -335,6 +335,120 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h2>Extending Classes</h2>
+                        <h3>Inheritance</h3>
+                        <div class="row">
+                            <div class="col col-10 offset-1">
+                                <ul class="list-spaced">
+                                    <li>Parent class defines properties and methods common to all cases</li>
+                                    <li>Child (extending) class inherits from parent</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>One of the most useful/essential characteristics of OOP</p>
+                            <p>Allows for code reuse, DRY</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Extending Classes</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/extend.png" style="width: 100%;">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Parent/child hierarchy</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Extending Classes</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <img src="assets/img/extending.png" style="width: 100%;">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>FormElementBase does everything, except rendering</p>
+                            <p>ABSTRACT keyword</p>
+                            <p>Child classes only customize the output of render()</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Extending Classes</h2>
+                        <div class="row">
+                            <div class="col col-8 offset-2" style="margin-top: 1em">
+                                <img src="assets/img/extend-complicated.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Extending Classes</h2>
+                        <h3>Overriding</h3>
+                        <div class="row">
+                            <div class="col col-10 offset-1">
+                                <ul class="list-spaced">
+                                    <li>Parent defines method</li>
+                                    <li>Child (extending) class defines its own version of same method</li>
+                                    <li>Child class has opportunity to customize method's functionality</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>One of the most useful/essential characteristics of OOP</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Overridden Method</h2>
+                        <div class="row">
+                            <div class="col col-8 offset-2" style="margin-top: 1em">
+                                <img src="assets/img/ajax-textfield.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Overloading</h2>
+                        <div class="row">
+                            <div class="col col-10 offset-1">
+                                <ul class="list-spaced-more" style="margin-top: 1em">
+                                    <li>Not a feature of PHP</li>
+                                    <li>Possible by analyzing arguments</li>
+                                    <li>Keep it simple--new method, different name/footprint</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Not directly related to extending classes, but comes up frequently when discussing overridden methods.</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Multiple Inheritance</h2>
+                        <div class="row">
+                            <div class="col col-10 offset-1" style="position: relative">
+                                <img src="assets/img/multiple-inheritance.png">
+                                <img src="assets/img/x-red.png" class="fragment" style="position: absolute; top: 0; left: 130px; height: 100%">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Diamond problem</p>
+                            <p>Multiple interfaces, max 1 direct parent class</p>
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
                     <h2>Questions</h2>
                     <div class="row">
                         <h3 style="margin-top: 2.5em">Thanks for attending.</h3>
