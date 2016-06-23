@@ -94,9 +94,8 @@
                     <h2>Objectives</h2>
                     <div class="row">
                         <div class="col col-10 offset-1">
-                            <ul class="list-spaced-most" style="margin-top: 1em">
+                            <ul class="list-spaced-most" style="margin-top: 1.5em">
                                 <li>Understand basic OOP concepts</li>
-                                <li></li>
                                 <li>Utilize OOP to customize Drupal</li>
                             </ul>
                         </div>
@@ -247,6 +246,7 @@
                             </div>
                         </div>
                         <aside class="notes">
+                            <p>Codified object models real-world object.</p>
                         </aside>
                     </section>
 
@@ -258,6 +258,7 @@
                             </div>
                         </div>
                         <aside class="notes">
+                            <p>Create (instantiate) an object, an instance of a class.</p>
                         </aside>
                     </section>
 
@@ -267,8 +268,8 @@
                             <div class="col col-10 offset-1">
                                 <ul class="list-spaced">
                                     <li><code>public</code></li>
-                                    <li><code>private</code></li>
                                     <li><code>protected</code></li>
+                                    <li><code>private</code></li>
                                     <li><code>final</code>*</li>
                                 </ul>
                             </div>
@@ -523,6 +524,47 @@
                     </div>
                     <aside class="notes">
                     </aside>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Dependency Injection</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <img src="assets/img/di.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Dependency Injection</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <img src="assets/img/use-di.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Service Container</h2>
+                        <div class="row">
+                            <div class="col col-12">
+                                <ul class="list-spaced">
+                                    <li>Services defined in <code>module_name.services.yml</code></li>
+                                    <li><code>\Drupal::service(<em>name_of_service</em>);</code></li>
+                                    <li>Avoid calling in classes</li>
+                                    <li>Pass as parameter (DI) when possible</li>
+                                </ul>
+                                <p><a href="https://www.drupal.org/node/2133171">https://www.drupal.org/node/2133171</a></p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
