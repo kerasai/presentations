@@ -568,6 +568,139 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h2>Objects in Drupal 7</h2>
+                        <div class="row">
+                            <div class="col col-10 offset-1" style="margin-top: 3em">
+                                <p class="fragment">Yes, they exist!</p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Autoloading</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <img src="assets/img/info.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>SimpleTest</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: .5em">
+                                <ul class="list-spaced-more" style="font-size: .8em">
+                                    <li>Extend <code>DrupalWebTestCase</code> for integration tests</li>
+                                    <li>Extend <code>DrupalUnitTestCase</code> for unit tests</li>
+                                    <li>Implement <code>getInfo()</code> &amp; <code>setUp()</code> methods</li>
+                                    <li>Any number of methods starting with <code>test</code> for tests</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>May create abstract "base" class with helper methods and other classes extend it</p>
+                            <p>aggregator, poll, profile for examples</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Queues</h2>
+                        <div class="row">
+                            <div class="col col-10 offset-1" style="margin-top: .5em">
+                                <ul class="list-spaced">
+                                    <li>Queue handling classes extend <code>DrupalQueueInterface</code> or <code>DrupalReliableQueueInterface</code></li>
+                                    <li><code>queue_class_$name</code></li>
+                                    <li><code>queue_default_class</code></li>
+                                    <li><code>queue_default_reliable_class</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Defaults to SystemQueue (db)</p>
+                            <p>MemoryQueue, not reliable order</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Additional OOP in Core</h2>
+                        <div class="row">
+                            <div class="col col-10 offset-1" style="margin-top: .5em">
+                                <ul class="list-spaced">
+                                    <li>Entity Controllers</li>
+                                    <li>Mail System</li>
+                                    <li>Search query handler</li>
+                                    <li>Module and Theme Updater</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Node, comment, user, Entity API module</p>
+                            <p>Mime mail and Mail System modules for HTML mail, devel collector</p>
+                            <p>Module and theme updater extend "updater"</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Views Handlers</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: .5em;font-size: .8em;">
+                                <ul class="list-spaced">
+                                    <li>Implement <code>hook_views_data()</code> for your own tables</li>
+                                    <li>Implement <code>hook_views_data_alter()</code> for other modules' tables</li>
+                                    <li>Use pseudo fields to add new Views fields</li>
+                                    <li>Custom hanlders to as field render, filter, sort, or argument</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                            <p>Views has built-in handlers for most field types</p>
+                            <p>Extend handlers for custom rendering, query, options, exposed form, etc</p>
+                            <p>views_handler_field_entity for access to entity in handler</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Views Handlers</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <img src="assets/img/date_day.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+
+                    <section>
+                        <h2>Views Handlers</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 1em">
+                                <img src="assets/img/date_sort.png">
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>OOP in D8</h2>
+                        <div class="row">
+                            <div class="col col-12" style="margin-top: 3em">
+                                <p class="fragment">It's <em>everywhere</em></p>
+                            </div>
+                        </div>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
                     <h2>Questions</h2>
                     <div class="row">
                         <h3 style="margin-top: 2.5em">Thanks for attending.</h3>
