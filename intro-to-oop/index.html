@@ -462,6 +462,7 @@
                             </div>
                         </div>
                         <aside class="notes">
+                            <p>Full class name is actually Drupal\Core\Render\Element\Textfield</p>
                         </aside>
                     </section>
 
@@ -473,6 +474,8 @@
                             </div>
                         </div>
                         <aside class="notes">
+                            <p>Usually avoid traits</p>
+                            <p>Prefer to pass in code as dependency</p>
                         </aside>
                     </section>
 
@@ -523,6 +526,8 @@
                             </div>
                         </div>
                         <aside class="notes">
+                            <p>Example of something that gets saved, presumably loaded sometime in future</p>
+                            <p>What if we don't want MySql storage</p>
                         </aside>
                     </section>
 
@@ -575,6 +580,8 @@
                             </div>
                         </div>
                         <aside class="notes">
+                            <p>Generally in .inc files</p>
+                            <p>tests in .test files</p>
                         </aside>
                     </section>
 
@@ -611,6 +618,7 @@
                         <aside class="notes">
                             <p>Defaults to SystemQueue (db)</p>
                             <p>MemoryQueue, not reliable order</p>
+                            <p>Provide custom class in module, set variable to use that class</p>
                         </aside>
                     </section>
 
